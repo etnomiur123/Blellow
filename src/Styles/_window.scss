@@ -1,0 +1,33 @@
+@import "./vars";
+
+.window {
+    height: 88vh;
+    position: relative;
+}
+
+.windowTitle {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+.windowTitle h2 {
+    font-size: 3rem;
+}
+
+.imageContainer {
+    height: inherit;
+    width: 100%;
+    filter: brightness(50%);
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+}

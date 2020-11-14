@@ -1,0 +1,28 @@
+@import "./vars";
+
+.about {
+    width: $custom-width;
+    margin: 0 auto;
+    position: relative;
+}
+
+.aboutContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+}
+
+.aboutDetails ul{
+    margin: 0;
+    padding: 0;
+}
+
+.aboutDetails ul {
+    text-transform: uppercase;
+}
+
+.textType1 {
+    font-size: 1.2rem;
+}

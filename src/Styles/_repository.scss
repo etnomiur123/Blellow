@@ -1,0 +1,21 @@
+ @import "./vars";
+ 
+ .repositoryContainer {
+    width: $custom-width;
+    margin: 0 auto;
+} 
+
+.repository {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-auto-rows: minmax(0, 100%);
+    gap: 25px 15px;
+    min-height: 50vh;
+} 
+
+.noResults {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

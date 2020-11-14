@@ -1,0 +1,102 @@
+@import "./vars";
+
+.movieContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "image details details";
+    grid-gap: 3rem;
+    width: $custom-width;
+    margin: 0 auto;
+}
+
+.movieDetails h2 span {
+    color: $green;
+}
+
+.movieImageContainer {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 20rem;
+    grid-area: image;
+}
+
+.movieImage {
+    width: 100%;
+    border-radius: $img-radius;
+}
+
+.movieDetails {
+    flex: 2;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    grid-area: details;
+}
+
+.movieDetails ul {
+    margin: 0;
+    padding: 0;
+    line-height: 2rem;
+}
+
+
+.ratings {
+    margin-top: 3rem;
+}
+
+.ratings ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ratings li {
+    margin: 0 2rem 1rem 0;
+    border: 2px solid $green;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+
+li span {
+    font-weight: 600;
+}
+
+.detailsList span {
+    position: relative;
+    margin-right: 25px;
+}
+
+.detailsList li {
+    margin-top: 10px;
+}
+
+.detailsList span:after {
+    content: "";
+    position: absolute;
+    background-color: $green;
+    height: 100%;
+    width: 3px;
+    top: 0;
+    right: -15px;
+    border-radius: 20%;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .movieContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "image"
+        "details"
+    }
+
+    .movieImageContainer {
+        grid-area: image;
+    }
+
+    .movieDetails {
+        grid-area: details;
+    }
+}

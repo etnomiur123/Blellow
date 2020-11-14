@@ -1,0 +1,23 @@
+@import "about";
+@import "card";
+@import "filter";
+@import "loader";
+@import "movie";
+@import "nav";
+@import "repository";
+@import "search";
+@import "window";
+@import "vars";
+
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: $background-gray;
+    color: $font-color;
+}
+
+ul {
+    list-style: none;
+}

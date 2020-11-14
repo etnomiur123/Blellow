@@ -1,0 +1,53 @@
+@import "./vars";
+
+.filterForm {
+    display: flex;
+    padding: 15px 0;
+    flex-wrap: wrap;
+}
+
+.filterForm > * {
+    margin: 0.2rem;
+}
+
+input, select {
+    font-family: inherit;
+    font-size: 1.1rem;
+    padding: 3px 10px;
+    border-radius: 45px;
+    border: 2px solid transparent;
+}
+
+input:focus,
+.filterBtn:focus,
+select:focus {
+    outline: none;
+    border: 2px solid $green;
+}
+
+.titleFilter {
+    flex: 2;
+}
+
+.yearFilter {
+    flex: 1;
+}
+
+.typeFilter {
+    flex: 1;
+}
+
+.filterBtn {
+    font-family: inherit;
+    min-width: 200px;
+    border-radius: 45px;
+    padding: 3px;
+    font-size: 1.1rem;
+    line-height: 1rem;
+    border: 3px solid $green;
+    min-height: 34px;
+    flex: 1;
+    background-color: $background-gray;
+    color: white;
+    cursor: pointer;
+}

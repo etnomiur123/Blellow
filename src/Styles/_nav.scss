@@ -1,0 +1,125 @@
+@import "./vars";
+
+.nav {
+    background-color: $background-gray;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 12vh;
+    position: relative;
+}
+
+.navigationDiv {
+    display: flex;
+    justify-content: space-between;
+    width: $custom-width;
+    align-items: center;
+}
+
+.navigationDiv>* {
+    width: 50%;
+}
+
+.logo a {
+    font-size: 3rem;
+    font-weight: 600;
+    color: $green;
+    text-decoration: none;
+}
+
+.list {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.1rem;
+}
+
+.list a {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.listopen a {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.listopen a:before {
+    content: "";
+    position: absolute;
+    margin-top: 3px;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    background-color: $green;
+    transition: transform .3s ease;
+}
+
+.list a:before {
+    content: "";
+    position: absolute;
+    margin-top: 3px;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    background-color: $green;
+    transition: transform .3s ease;
+}
+
+.list a:hover::before {
+    transform: scaleX(1);
+}
+.listopen a:hover::before {
+    transform: scaleX(1);
+}
+
+@media screen and (max-width: 768px) {
+    .list {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        background: $background-gray;
+        height: 88vh;
+        width: 100%;
+        left: 0;
+        top: 12vh;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1.5rem;
+        transition: all 0.2s ease-in-out;
+        opacity: 0;
+    }
+
+    .open {
+        z-index: 1;
+        opacity: 1;
+        position: fixed;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        position: absolute;
+        right: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    .line {
+        width: 100%;
+        height: 2px;
+        background-color: white;
+    }
+}

@@ -1,0 +1,35 @@
+@import "./vars";
+
+.search {
+    display: flex;
+    border-radius: 45px;
+    overflow: hidden;
+    position: relative;
+}
+
+.search input[type=text] {
+    flex: 3;
+    padding: 10px 115px 10px 15px;
+    border: none;
+    font-size: 1.1rem;
+    background-color: white;
+    color: $font-color-2;
+}
+
+.search button {
+    border: none;
+    font-size: 1rem;
+    color: $font-color;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #999;
+    padding: 15px 45px;
+    border-radius: 45px;
+    box-sizing: border-box;
+}
+
+.search input[type=text]:focus, .search button:focus {
+    outline: none;
+}
